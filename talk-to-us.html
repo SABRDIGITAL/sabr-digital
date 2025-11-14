@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Talk To Us – SABR DIGITAL</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script defer src="https://unpkg.com/feather-icons"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-sabr-black text-zinc-50 font-sans bg-grid">
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="mx-auto max-w-7xl px-4">
+      <nav class="glass mt-4 rounded-2xl shadow-soft flex items-center justify-between px-4 py-3 border border-sabr-border">
+        <a href="index.html#home" class="flex items-center gap-2">
+          <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-sabr-blue via-sabr-electric to-cyan-300 flex items-center justify-center shadow-glow">
+            <span class="text-xs font-black tracking-[0.18em]">S</span>
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="font-semibold tracking-tight text-sm md:text-base">SABR DIGITAL</span>
+            <span class="text-[11px] text-sabr-blue/80 uppercase tracking-[0.18em]">WEB STUDIO</span>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm">
+          <a href="our-work.html" class="nav-link">OUR WORK</a>
+          <a href="process.html" class="nav-link">THE PROCESS</a>
+          <a href="talk-to-us.html" class="nav-link nav-link-active">TALK TO US</a>
+        </div>
+        <button id="mobileMenuToggle" class="md:hidden inline-flex items-center justify-center rounded-lg border border-sabr-border px-2.5 py-1.5">
+          <i data-feather="menu" class="w-4 h-4"></i>
+        </button>
+      </nav>
+      <div id="mobileMenu" class="hidden md:hidden mt-2 glass rounded-2xl shadow-soft border border-sabr-border px-4 py-3">
+        <div class="flex flex-col gap-2 text-sm">
+          <a href="our-work.html" class="nav-link">OUR WORK</a>
+          <a href="process.html" class="nav-link">THE PROCESS</a>
+          <a href="talk-to-us.html" class="nav-link nav-link-active">TALK TO US</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-32 md:pt-40 pb-20">
+    <section class="max-w-3xl mx-auto px-4 mb-10 text-center" data-animate="fade-up">
+      <p class="text-sabr-blue/80 text-xs font-semibold tracking-[0.22em] uppercase mb-3">
+        TALK TO US
+      </p>
+      <h1 class="section-title">Tell us about your business</h1>
+      <p class="mt-3 text-zinc-400">
+        No pushy sales calls. Just a simple conversation about what you do and what you need from your website.
+      </p>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 grid md:grid-cols-[1.1fr,0.9fr] gap-10">
+      <!-- Contact form (static for now – can wire to Formspree later) -->
+      <div class="rounded-2xl border border-sabr-border bg-sabr-deep/70 p-6 md:p-8" data-animate="fade-up">
+        <h2 class="text-base md:text-lg font-semibold mb-4">Quick project form</h2>
+        <form class="space-y-3 text-sm">
+          <div>
+            <label class="form-label">Name</label>
+            <input class="form-input" placeholder="Your name" required />
+          </div>
+          <div>
+            <label class="form-label">Business name</label>
+            <input class="form-input" placeholder="What’s your business called?" />
+          </div>
+          <div>
+            <label class="form-label">Business type</label>
+            <input class="form-input" placeholder="e.g. Barber, Tattoo studio, Builder" />
+          </div>
+          <div>
+            <label class="form-label">How should we contact you?</label>
+            <input class="form-input" placeholder="Email, phone or WhatsApp" />
+          </div>
+          <div>
+            <label class="form-label">Do you have a website already?</label>
+            <input class="form-input" placeholder="Yes/No + paste the link if yes" />
+          </div>
+          <div>
+            <label class="form-label">What are you hoping your website will do for you?</label>
+            <textarea class="form-input min-h-[100px]" placeholder="Bring in more bookings, look more professional, show your work, etc."></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full justify-center mt-3">
+            Send (placeholder – we’ll wire this up later)
+          </button>
+        </form>
+      </div>
+
+      <!-- Other ways to contact -->
+      <div class="space-y-6 text-sm" data-animate="fade-left">
+        <div class="rounded-2xl border border-sabr-border bg-sabr-deep/70 p-6">
+          <h2 class="text-base md:text-lg font-semibold mb-3">Prefer to reach out directly?</h2>
+          <div class="space-y-3 text-zinc-300">
+            <p class="flex items-center gap-2">
+              <i data-feather="mail" class="w-4 h-4 text-sabr-blue"></i>
+              <a href="mailto:sabrdigitalwilts@gmail.com" class="link">
+                sabrdigitalwilts@gmail.com
+              </a>
+            </p>
+            <!-- You can swap these for real handles later -->
+            <p class="flex items-center gap-2">
+              <i data-feather="instagram" class="w-4 h-4 text-sabr-blue"></i>
+              <span>@sabrdigital (placeholder)</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-feather="phone-call" class="w-4 h-4 text-sabr-blue"></i>
+              <span>Phone / WhatsApp: [add number here later]</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-sabr-border bg-sabr-deep/70 p-6">
+          <h2 class="text-base md:text-lg font-semibold mb-2">What happens after you contact us?</h2>
+          <ol class="list-decimal list-inside text-xs text-zinc-300 space-y-1 mt-1">
+            <li>We reply with a couple of questions and suggest a quick call.</li>
+            <li>We talk through what you need and what’s possible.</li>
+            <li>You get a clear quote and rough timeline.</li>
+            <li>If you’re happy, we lock in the project and get started.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-8 border-t border-sabr-border/60 bg-sabr-black/90">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm text-zinc-400">
+      <p>© <span id="year"></span> SABR DIGITAL. All rights reserved.</p>
+      <p>Based in Neston, Wiltshire · Working UK-wide</p>
+    </div>
+  </footer>
+</body>
+</html>
