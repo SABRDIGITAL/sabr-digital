@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SABR DIGITAL – Modern Websites for UK Businesses</title>
+  <meta name="description" content="SABR DIGITAL builds clean, modern websites for barbers, tattoo studios, trades and local UK businesses." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script defer src="https://unpkg.com/feather-icons"></script>
+
+  <!-- GSAP for animations -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Custom JS -->
+  <script defer src="script.js"></script>
+</head>
+
+<body class="bg-sabr-black text-zinc-50 font-sans relative bg-grid">
+  <!-- Sticky Nav -->
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="mx-auto max-w-7xl px-4">
+      <nav class="glass mt-4 rounded-2xl shadow-soft flex items-center justify-between px-4 py-3 border border-sabr-border">
+        <a href="index.html#home" class="flex items-center gap-2">
+          <!-- SABR logo placeholder -->
+          <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-sabr-blue via-sabr-electric to-cyan-300 flex items-center justify-center shadow-glow">
+            <span class="text-xs font-black tracking-[0.18em]">S</span>
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="font-semibold tracking-tight text-sm md:text-base">SABR DIGITAL</span>
+            <span class="text-[11px] text-sabr-blue/80 uppercase tracking-[0.18em]">WEB STUDIO</span>
+          </div>
+        </a>
+
+        <!-- Desktop nav -->
+        <div class="hidden md:flex items-center gap-6 text-sm">
+          <a href="our-work.html" class="nav-link">OUR WORK</a>
+          <a href="process.html" class="nav-link">THE PROCESS</a>
+          <a href="talk-to-us.html" class="nav-link">TALK TO US</a>
+        </div>
+
+        <!-- Mobile nav button -->
+        <button id="mobileMenuToggle" class="md:hidden inline-flex items-center justify-center rounded-lg border border-sabr-border px-2.5 py-1.5">
+          <i data-feather="menu" class="w-4 h-4"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="hidden md:hidden mt-2 glass rounded-2xl shadow-soft border border-sabr-border px-4 py-3">
+        <div class="flex flex-col gap-2 text-sm">
+          <a href="our-work.html" class="nav-link">OUR WORK</a>
+          <a href="process.html" class="nav-link">THE PROCESS</a>
+          <a href="talk-to-us.html" class="nav-link">TALK TO US</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="pt-32 md:pt-40 pb-20">
+    <section class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div data-animate="fade-up">
+        <p class="text-sabr-blue/80 text-xs font-semibold tracking-[0.22em] uppercase mb-3">
+          WEBSITES FOR REAL UK BUSINESSES
+        </p>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+          Clean, modern websites that help you win more customers.
+        </h1>
+        <p class="mt-5 text-zinc-300/90 text-lg max-w-xl">
+          We build sharp, trustworthy websites for barbers, tattoo studios and trades so you stand out instantly and make it easy for customers to choose you.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="talk-to-us.html" class="btn-primary">
+            Get a Quote
+          </a>
+          <a href="our-work.html" class="btn-ghost">
+            View our work
+          </a>
+        </div>
+        <div class="mt-10 flex flex-wrap items-center gap-6 text-sm text-zinc-400">
+          <div class="flex items-center gap-2">
+            <i data-feather="shield" class="w-4 h-4 text-sabr-blue"></i>
+            <span>Professional &amp; trustworthy</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-feather="sparkles" class="w-4 h-4 text-sabr-blue"></i>
+            <span>Clean and modern design</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-feather="zap" class="w-4 h-4 text-sabr-blue"></i>
+            <span>Simple, done-for-you process</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero visual (image placeholder – later can be video) -->
+      <div class="relative" data-animate="fade-left">
+        <div class="absolute inset-0 blur-3xl opacity-60 bg-gradient-to-br from-sabr-blue/30 via-sabr-electric/20 to-cyan-300/25 rounded-[40px] -z-10 parallax-bg"></div>
+        <div class="rounded-3xl overflow-hidden border border-sabr-border shadow-soft bg-zinc-900/80">
+          <!-- TODO: replace this image with your own hero video or image -->
+          <img
+            src="https://images.unsplash.com/photo-1517456793572-c787fb72324a?q=80&w=2000&auto=format&fit=crop"
+            alt="Modern barbershop interior"
+            class="w-full h-80 object-cover" />
+        </div>
+
+        <!-- Two feature tiles (Before/After + Simple Process) -->
+        <div class="mt-4 grid grid-cols-2 gap-4">
+          <button id="beforeAfterCard" class="info-card text-left">
+            <p class="font-semibold flex items-center gap-2">
+              <i data-feather="columns" class="w-4 h-4 text-sabr-electric"></i>
+              <span>Before / After</span>
+            </p>
+            <p class="text-xs text-zinc-400 mt-1">
+              Compare old vs new in one glance.
+            </p>
+          </button>
+
+          <button id="simpleProcessCard" class="info-card text-left">
+            <p class="font-semibold flex items-center gap-2">
+              <i data-feather="shuffle" class="w-4 h-4 text-sabr-electric"></i>
+              <span>Simple Process</span>
+            </p>
+            <p class="text-xs text-zinc-400 mt-1">
+              Quick chat → design → feedback → go live.
+            </p>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problems → Solutions -->
+    <section class="py-20 bg-gradient-to-b from-transparent to-sabr-deep">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-2xl" data-animate="fade-up">
+          <h2 class="section-title">Look professional. Stand out locally.</h2>
+          <p class="mt-3 text-zinc-400">
+            Most local businesses either don’t have a website or have one that looks dated. We fix that with clean, modern design that builds trust at first glance.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+          <article class="problem-card" data-animate="fade-up">
+            <p class="tag">Problem</p>
+            <h3 class="card-title">No website / old site</h3>
+            <p class="card-body">
+              Customers can’t see your work or take you seriously.
+            </p>
+            <div class="card-highlight">
+              → Clean redesign that feels modern and reliable.
+            </div>
+          </article>
+
+          <article class="problem-card" data-animate="fade-up">
+            <p class="tag">Problem</p>
+            <h3 class="card-title">Hard to trust</h3>
+            <p class="card-body">
+              No proof, no reviews, no structure.
+            </p>
+            <div class="card-highlight">
+              → Before/after + testimonials placed clearly.
+            </div>
+          </article>
+
+          <article class="problem-card" data-animate="fade-up">
+            <p class="tag">Problem</p>
+            <h3 class="card-title">Blend in with competitors</h3>
+            <p class="card-body">
+              Generic templates don’t match your quality.
+            </p>
+            <div class="card-highlight">
+              → Custom layout with your brand &amp; photos.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- View Our Work (cards link to OUR WORK page sections) -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-end justify-between gap-4 mb-8" data-animate="fade-up">
+          <div>
+            <h2 class="section-title">View our work</h2>
+            <p class="mt-2 text-zinc-400 text-sm md:text-base">
+              Three example builds to show how we transform businesses online.
+            </p>
+          </div>
+          <a href="our-work.html" class="hidden md:inline-flex items-center gap-2 text-sm text-sabr-blue hover:text-sabr-electric">
+            See all work
+            <i data-feather="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Barber -->
+          <a href="our-work.html#barber" class="project-card" data-animate="fade-up">
+            <!-- TODO: replace with real screenshot -->
+            <img
+              src="https://images.unsplash.com/photo-1531907700752-62799b2a3e5e?q=80&w=1600&auto=format&fit=crop"
+              alt="Barber studio website example"
+              class="project-image" />
+            <div class="project-overlay"></div>
+            <div class="project-meta">
+              <p class="font-semibold">Barber Studio</p>
+              <p class="text-xs text-white/80">Website redesign</p>
+            </div>
+          </a>
+
+          <!-- Tattoo -->
+          <a href="our-work.html#tattoo" class="project-card" data-animate="fade-up">
+            <!-- TODO: replace with real screenshot -->
+            <img
+              src="https://images.unsplash.com/photo-1541976076758-347942db197a?q=80&w=1600&auto=format&fit=crop"
+              alt="Tattoo studio website example"
+              class="project-image" />
+            <div class="project-overlay"></div>
+            <div class="project-meta">
+              <p class="font-semibold">Tattoo Studio</p>
+              <p class="text-xs text-white/80">Identity &amp; site build</p>
+            </div>
+          </a>
+
+          <!-- Trades -->
+          <a href="our-work.html#trades" class="project-card" data-animate="fade-up">
+            <!-- TODO: replace with real screenshot -->
+            <img
+              src="https://images.unsplash.com/photo-1523419409543-8c1aec7d7b86?q=80&w=1600&auto=format&fit=crop"
+              alt="Trades website example"
+              class="project-image" />
+            <div class="project-overlay"></div>
+            <div class="project-meta">
+              <p class="font-semibold">Trades &amp; Construction</p>
+              <p class="text-xs text-white/80">Landing page build</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-sabr-deep/80 border-y border-sabr-border/60">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div data-animate="fade-up">
+            <h2 class="section-title">What our clients say</h2>
+            <p class="mt-2 text-zinc-400 max-w-md">
+              Placeholders for now – swap these with real messages from barbers, tattoo studios and trades once you’ve launched a few sites.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+          <article class="testimonial-card" data-animate="fade-up">
+            <div class="flex items-center justify-between mb-3">
+              <p class="font-semibold text-sm">Fade Room Barbers</p>
+              <span class="text-[11px] text-sabr-blue/80 uppercase tracking-[0.16em]">Barber Studio</span>
+            </div>
+            <p class="text-xs text-yellow-400 mb-2">★★★★★</p>
+            <p class="text-sm text-zinc-300">
+              “Our new site makes us look as professional online as we do in the chair. Customers actually mention finding us on Google now.”
+            </p>
+          </article>
+
+          <article class="testimonial-card" data-animate="fade-up">
+            <div class="flex items-center justify-between mb-3">
+              <p class="font-semibold text-sm">Blackline Ink</p>
+              <span class="text-[11px] text-sabr-blue/80 uppercase tracking-[0.16em]">Tattoo Studio</span>
+            </div>
+            <p class="text-xs text-yellow-400 mb-2">★★★★★</p>
+            <p class="text-sm text-zinc-300">
+              “Clean, dark layout that fits our style. Enquiries feel more serious now – people already trust us before they walk in.”
+            </p>
+          </article>
+
+          <article class="testimonial-card" data-animate="fade-up">
+            <div class="flex items-center justify-between mb-3">
+              <p class="font-semibold text-sm">Oak &amp; Iron Carpentry</p>
+              <span class="text-[11px] text-sabr-blue/80 uppercase tracking-[0.16em]">Trades</span>
+            </div>
+            <p class="text-xs text-yellow-400 mb-2">★★★★★</p>
+            <p class="text-sm text-zinc-300">
+              “Simple, direct site that shows our work properly. It’s easier to quote jobs now because people already know what we do.”
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mini Process preview -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-[1.2fr,1fr] gap-10 items-center">
+        <div data-animate="fade-up">
+          <h2 class="section-title">A simple, done-for-you process</h2>
+          <p class="mt-3 text-zinc-400 max-w-xl">
+            No fluff, no tech jargon. Just a clear path from “no website” (or old website) to a clean, modern one that actually works.
+          </p>
+          <div class="mt-6 space-y-4">
+            <div class="process-step">
+              <span class="process-badge">01</span>
+              <div>
+                <h3 class="step-title">Quick chat</h3>
+                <p class="step-body">Tell us about your business, what you offer and what’s not working now.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <span class="process-badge">02</span>
+              <div>
+                <h3 class="step-title">We design</h3>
+                <p class="step-body">We map out a clean, modern layout that fits your brand, photos and services.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <span class="process-badge">03</span>
+              <div>
+                <h3 class="step-title">You review</h3>
+                <p class="step-body">You send feedback on the first version. We tweak it until it feels right.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <span class="process-badge">04</span>
+              <div>
+                <h3 class="step-title">Go live</h3>
+                <p class="step-body">We connect your domain, set everything live and make sure it works on mobile.</p>
+              </div>
+            </div>
+          </div>
+          <a href="process.html" class="inline-flex items-center gap-2 mt-6 text-sm text-sabr-blue hover:text-sabr-electric">
+            View full process
+            <i data-feather="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <!-- Included card -->
+        <div class="included-card" data-animate="fade-left">
+          <p class="text-xs font-semibold tracking-[0.22em] uppercase text-sabr-blue/80 mb-2">
+            WHAT'S INCLUDED
+          </p>
+          <h3 class="font-semibold text-lg mb-4">Every SABR website includes:</h3>
+          <ul class="space-y-2 text-sm text-zinc-200">
+            <li class="flex items-start gap-2">
+              <i data-feather="check-circle" class="w-4 h-4 text-sabr-electric mt-[2px]"></i>
+              <span>Clean, modern layout designed around your brand and photos.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-feather="check-circle" class="w-4 h-4 text-sabr-electric mt-[2px]"></i>
+              <span>Mobile-friendly build that looks sharp on phones and tablets.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-feather="check-circle" class="w-4 h-4 text-sabr-electric mt-[2px]"></i>
+              <span>Fast loading, lightweight pages (no bloated templates).</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-feather="check-circle" class="w-4 h-4 text-sabr-electric mt-[2px]"></i>
+              <span>Basic on-page SEO setup so customers can actually find you.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-feather="check-circle" class="w-4 h-4 text-sabr-electric mt-[2px]"></i>
+              <span>Done-for-you setup on your domain &amp; hosting.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact (mini) -->
+    <section class="py-20 border-t border-sabr-border/60">
+      <div class="max-w-3xl mx-auto px-4 text-center" data-animate="fade-up">
+        <h2 class="section-title">Ready for a website that actually helps?</h2>
+        <p class="mt-3 text-zinc-400">
+          Tell us a bit about your business and we’ll reply with a simple plan and clear quote.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a href="talk-to-us.html" class="btn-primary">
+            Talk to us
+          </a>
+          <a href="mailto:sabrdigitalwilts@gmail.com" class="btn-ghost">
+            Email us directly
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Talk to Us button -->
+  <a href="talk-to-us.html" class="fixed bottom-4 right-4 z-40 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sabr-electric text-zinc-950 text-sm font-semibold shadow-glow hover:translate-y-[-1px] transition-transform">
+    Talk to us
+    <i data-feather="message-circle" class="w-4 h-4"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-sabr-border/60 bg-sabr-black/90">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm text-zinc-400">
+      <p>© <span id="year"></span> SABR DIGITAL. All rights reserved.</p>
+      <p class="flex items-center gap-2">
+        <span>Based in Neston, Wiltshire · Working UK-wide</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Before/After Modal -->
+  <div id="beforeAfterModal" class="modal-backdrop hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Before / After – example transformation</h3>
+        <button class="modal-close" data-modal-close="beforeAfterModal">
+          <i data-feather="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="grid md:grid-cols-2 gap-4 mb-4">
+          <!-- TODO: replace these with your real before/after screenshots -->
+          <div>
+            <p class="text-xs text-zinc-400 mb-1 uppercase tracking-[0.18em]">Before</p>
+            <div class="rounded-xl overflow-hidden border border-sabr-border/60 bg-zinc-900/80 h-40 flex items-center justify-center text-xs text-zinc-500">
+              Old website screenshot here
+            </div>
+          </div>
+          <div>
+            <p class="text-xs text-zinc-400 mb-1 uppercase tracking-[0.18em]">After</p>
+            <div class="rounded-xl overflow-hidden border border-sabr-border/60 bg-zinc-900/80 h-40 flex items-center justify-center text-xs text-zinc-500">
+              New SABR website screenshot here
+            </div>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 text-sm">
+          <div>
+            <p class="font-semibold text-zinc-200 mb-2">Before – common problems</p>
+            <ul class="space-y-1 text-zinc-400 text-xs">
+              <li>• Cluttered layout, small text</li>
+              <li>• Outdated colours and fonts</li>
+              <li>• No clear call-to-action</li>
+              <li>• Hard to use on mobile</li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-semibold text-zinc-200 mb-2">After – what we fix</p>
+            <ul class="space-y-1 text-zinc-400 text-xs">
+              <li>• Clean, modern design that matches your brand</li>
+              <li>• Clear “book now” or “get a quote” button</li>
+              <li>• Strong photos, clear copy and trust signals</li>
+              <li>• Optimised for phones, tablets and desktops</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ghost-sm" data-modal-close="beforeAfterModal">Close</button>
+        <a href="our-work.html" class="btn-primary-sm">See example projects</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Simple Process Modal -->
+  <div id="simpleProcessModal" class="modal-backdrop hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">How our process works</h3>
+        <button class="modal-close" data-modal-close="simpleProcessModal">
+          <i data-feather="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="grid md:grid-cols-4 gap-4 text-sm">
+          <div class="process-pill">
+            <span class="pill-number">01</span>
+            <p class="pill-title">Quick chat</p>
+            <p class="pill-body">We learn about your business, services and goals.</p>
+          </div>
+          <div class="process-pill">
+            <span class="pill-number">02</span>
+            <p class="pill-title">We design</p>
+            <p class="pill-body">We build a clean, modern layout that fits your brand.</p>
+          </div>
+          <div class="process-pill">
+            <span class="pill-number">03</span>
+            <p class="pill-title">Feedback</p>
+            <p class="pill-body">You review everything and we make tweaks you need.</p>
+          </div>
+          <div class="process-pill">
+            <span class="pill-number">04</span>
+            <p class="pill-title">Go live</p>
+            <p class="pill-body">We connect your domain and launch the site for you.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ghost-sm" data-modal-close="simpleProcessModal">Close</button>
+        <a href="process.html" class="btn-primary-sm">View full process</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
