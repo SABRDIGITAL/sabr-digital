@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SABR DIGITAL</title>
+  <meta name="description" content="Clean, modern websites that help UK businesses look professional and win more customers." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", "Arial", "sans-serif"],
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(0,0,0,.10)",
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script defer src="https://unpkg.com/feather-icons"></script>
+
+  <!-- GSAP -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass { backdrop-filter: saturate(180%) blur(12px); background: rgba(20,20,20,.6); }
+    body { background-color: #020617; }
+  </style>
+</head>
+
+<body class="bg-zinc-950 text-zinc-50 font-sans">
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="mx-auto max-w-7xl px-4">
+      <nav class="glass mt-4 rounded-2xl shadow-soft flex items-center justify-between px-4 py-3 border border-zinc-800/60">
+        <a href="#home" class="flex items-center gap-2 font-bold tracking-tight text-xl">
+          <span class="inline-block h-8 w-8 rounded-xl bg-gradient-to-tr from-blue-500 via-blue-500 to-cyan-400"></span>
+          <span>SABR DIGITAL</span>
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#work" class="hover:opacity-80">Work</a>
+          <a href="#process" class="hover:opacity-80">Process</a>
+          <a href="#contact" class="hover:opacity-80">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="pt-36 md:pt-40 pb-20">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+          Clean, modern websites that help you win more customers.
+        </h1>
+        <p class="mt-5 text-zinc-300/90 text-lg max-w-xl">
+          A professional online presence built for real UK businesses. We make the process simple — you send the basics, we design, you go live.
+        </p>
+        <div class="mt-8 flex items-center gap-3">
+          <a href="#contact" class="px-5 py-3 rounded-xl bg-blue-500 text-white font-semibold shadow-soft hover:translate-y-[-2px] transition">
+            Get a Quote
+          </a>
+          <a href="#work" class="px-5 py-3 rounded-xl border border-zinc-800">
+            View our work
+          </a>
+        </div>
+        <div class="mt-10 flex items-center gap-6 text-sm text-zinc-400">
+          <div class="flex items-center gap-2"><i data-feather="shield"></i><span>Professional & trustworthy</span></div>
+          <div class="flex items-center gap-2"><i data-feather="sparkles"></i><span>Clean, modern design</span></div>
+          <div class="flex items-center gap-2"><i data-feather="zap"></i><span>Simple, done-for-you process</span></div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute inset-0 blur-3xl opacity-30 bg-gradient-to-br from-blue-500/40 via-blue-500/20 to-cyan-400/20 rounded-[40px] -z-10"></div>
+        <div class="rounded-3xl overflow-hidden border border-zinc-800 shadow-soft">
+          <img src="https://images.unsplash.com/photo-1517456793572-c787fb72324a?q=80&w=2000&auto=format&fit=crop"
+               alt="Minimal barbershop environment"
+               class="w-full h-80 object-cover" />
+        </div>
+        <div class="mt-4 grid grid-cols-3 gap-4">
+          <div class="p-4 rounded-2xl bg-zinc-900 shadow-soft border border-zinc-800">
+            <p class="font-semibold">Before/After</p>
+            <p class="text-sm text-zinc-400">Show clear upgrades.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-zinc-900 shadow-soft border border-zinc-800">
+            <p class="font-semibold">Portfolio</p>
+            <p class="text-sm text-zinc-400">Clean proof of work.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-zinc-900 shadow-soft border border-zinc-800">
+            <p class="font-semibold">Simple Process</p>
+            <p class="text-sm text-zinc-400">We handle everything.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems -->
+  <section class="py-20 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Look professional. Stand out locally.</h2>
+        <p class="mt-3 text-zinc-400">
+          Most local businesses either don’t have a website or have one that looks dated. We fix that with clean, modern design that builds trust at first glance.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <article class="p-6 rounded-3xl bg-zinc-900 border border-zinc-800">
+          <p class="text-zinc-400 text-sm">Problem</p>
+          <h3 class="font-semibold text-xl mt-1">No website / old site</h3>
+          <p class="mt-2 text-zinc-400">Customers can’t see your work or take you seriously.</p>
+          <div class="mt-4 text-blue-400 text-sm">→ Clean redesign that feels modern and reliable.</div>
+        </article>
+        <article class="p-6 rounded-3xl bg-zinc-900 border border-zinc-800">
+          <p class="text-zinc-400 text-sm">Problem</p>
+          <h3 class="font-semibold text-xl mt-1">Hard to trust</h3>
+          <p class="mt-2 text-zinc-400">No proof, no reviews, no structure.</p>
+          <div class="mt-4 text-blue-400 text-sm">→ Before/after + testimonials placed clearly.</div>
+        </article>
+        <article class="p-6 rounded-3xl bg-zinc-900 border border-zinc-800">
+          <p class="text-zinc-400 text-sm">Problem</p>
+          <h3 class="font-semibold text-xl mt-1">Blend in with competitors</h3>
+          <p class="mt-2 text-zinc-400">Generic templates don’t match your quality.</p>
+          <div class="mt-4 text-blue-400 text-sm">→ Custom layout with your brand & photos.</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="work" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold">Selected Work</h2>
+          <p class="mt-2 text-zinc-400">Replace with your projects.</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="group relative overflow-hidden rounded-3xl border border-zinc-800">
+          <img class="h-56 w-full object-cover group-hover:scale-105 transition"
+               src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=1600&auto=format&fit=crop"
+               alt="Project 1" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <p class="font-semibold">Barber Studio</p>
+            <p class="text-sm text-white/80">Redesign</p>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl border border-zinc-800">
+          <img class="h-56 w-full object-cover group-hover:scale-105 transition"
+               src="https://images.unsplash.com/photo-1541976076758-347942db197a?q=80&w=1600&auto=format&fit=crop"
+               alt="Project 2" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <p class="font-semibold">Tattoo Studio</p>
+            <p class="text-sm text-white/80">Identity + Site</p>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl border border-zinc-800">
+          <img class="h-56 w-full object-cover group-hover:scale-105 transition"
+               src="https://images.unsplash.com/photo-1523419409543-8c1aec7d7b86?q=80&w=1600&auto=format&fit=crop"
+               alt="Project 3" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <p class="font-semibold">Trades / Construction</p>
+            <p class="text-sm text-white/80">Landing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="py-20 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">A simple, done-for-you process</h2>
+      <div class="grid md:grid-cols-4 gap-6 mt-10">
+        <article class="p-6 rounded-3xl bg-zinc-900 border border-zinc-800">
+          <p class="text-blue-400 font-semibold">01</p>
+          <h3 class="font-semibold mt-2">Quick chat</h3>
+          <p class="text-zinc-400 mt-1">Tell us about your business and what you need.</p>
+        </article>
+        <article class="p-6 rounded-3xl bg-zinc-900 border border-zinc-800">
+          <p class="text-blue-400 font-semibold">02</p>
+          <h3 class="font-semibold mt-2">Send basics</h3>
+          <p class="text-zinc-400 mt-1">Logo (if you have one), photos, and key info.</p>
+        </article>
+        <article class="p-6 rounded-3xl bg-zinc-900 border border-zinc-800">
+          <p class="text-blue-400 font-semibold">03</p>
+          <h3 class="font-semibold mt-2">Design</h3>
+          <p class="text-zinc-400 mt-1">We design a clean, modern site that fits your brand.</p>
+        </article>
+        <article class="p-6 rounded-3xl bg-zinc-900 border border-zinc-800">
+          <p class="text-blue-400 font-semibold">04</p>
+          <h3 class="font-semibold mt-2">Go live</h3>
+          <p class="text-zinc-400 mt-1">Review, minor tweaks, then launch.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Get a Quote</h2>
+      <p class="mt-3 text-zinc-400">UK-based, working nationwide with a local mindset. Fill this in — we’ll reply quickly.</p>
+      <form class="mt-8 grid gap-3 text-left max-w-xl mx-auto">
+        <input name="Name" placeholder="Name" class="w-full p-3 rounded-xl bg-zinc-900 border border-zinc-800" required>
+        <input name="Business Type" placeholder="Business type (e.g., Barber, Tattoo, Builder)" class="w-full p-3 rounded-xl bg-zinc-900 border border-zinc-800" required>
+        <textarea name="Offer" placeholder="What do you do / offer?" class="w-full p-3 rounded-xl bg-zinc-900 border border-zinc-800" rows="3" required></textarea>
+        <textarea name="Message" placeholder="Message" class="w-full p-3 rounded-xl bg-zinc-900 border border-zinc-800" rows="4" required></textarea>
+        <button class="mt-2 px-5 py-3 rounded-xl bg-blue-500 text-white font-semibold shadow-soft">Send</button>
+      </form>
+      <div class="mt-4 text-sm text-zinc-500">
+        Prefer email?
+        <a href="mailto:raphgoss55@gmail.com" class="text-blue-400 underline">raphgoss55@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between text-sm text-zinc-400">
+      <p>© <span id="year"></span> SABR DIGITAL. Built with Tailwind.</p>
+      <a href="#home" class="hover:opacity-80">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.feather) feather.replace();
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+  </script>
+
+</body>
+</html>
