@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Process – SABR DIGITAL</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script defer src="https://unpkg.com/feather-icons"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-sabr-black text-zinc-50 font-sans bg-grid">
+  <!-- Header (same pattern) -->
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="mx-auto max-w-7xl px-4">
+      <nav class="glass mt-4 rounded-2xl shadow-soft flex items-center justify-between px-4 py-3 border border-sabr-border">
+        <a href="index.html#home" class="flex items-center gap-2">
+          <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-sabr-blue via-sabr-electric to-cyan-300 flex items-center justify-center shadow-glow">
+            <span class="text-xs font-black tracking-[0.18em]">S</span>
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="font-semibold tracking-tight text-sm md:text-base">SABR DIGITAL</span>
+            <span class="text-[11px] text-sabr-blue/80 uppercase tracking-[0.18em]">WEB STUDIO</span>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm">
+          <a href="our-work.html" class="nav-link">OUR WORK</a>
+          <a href="process.html" class="nav-link nav-link-active">THE PROCESS</a>
+          <a href="talk-to-us.html" class="nav-link">TALK TO US</a>
+        </div>
+        <button id="mobileMenuToggle" class="md:hidden inline-flex items-center justify-center rounded-lg border border-sabr-border px-2.5 py-1.5">
+          <i data-feather="menu" class="w-4 h-4"></i>
+        </button>
+      </nav>
+      <div id="mobileMenu" class="hidden md:hidden mt-2 glass rounded-2xl shadow-soft border border-sabr-border px-4 py-3">
+        <div class="flex flex-col gap-2 text-sm">
+          <a href="our-work.html" class="nav-link">OUR WORK</a>
+          <a href="process.html" class="nav-link nav-link-active">THE PROCESS</a>
+          <a href="talk-to-us.html" class="nav-link">TALK TO US</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-32 md:pt-40 pb-20">
+    <section class="max-w-5xl mx-auto px-4 mb-10" data-animate="fade-up">
+      <p class="text-sabr-blue/80 text-xs font-semibold tracking-[0.22em] uppercase mb-3">
+        THE PROCESS
+      </p>
+      <h1 class="section-title">How we go from “no website” to live in a few steps</h1>
+      <p class="mt-3 text-zinc-400 max-w-2xl">
+        We’re not trying to drown you in tech talk. Our process is built so you always know what’s happening and what comes next.
+      </p>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 space-y-8">
+      <div class="process-step-lg" data-animate="fade-up">
+        <div class="flex items-start gap-4">
+          <span class="process-badge">01</span>
+          <div>
+            <h2 class="text-lg font-semibold mb-1">Quick intro chat</h2>
+            <p class="text-sm text-zinc-300 mb-2">
+              We jump on a quick call or WhatsApp chat to understand your business, your services and what you want your website to do.
+            </p>
+            <ul class="text-xs text-zinc-400 space-y-1">
+              <li>• Who you are and where you’re based.</li>
+              <li>• What you offer and who your ideal customer is.</li>
+              <li>• Any existing website or social links you already have.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step-lg" data-animate="fade-up">
+        <div class="flex items-start gap-4">
+          <span class="process-badge">02</span>
+          <div>
+            <h2 class="text-lg font-semibold mb-1">Send us the basics</h2>
+            <p class="text-sm text-zinc-300 mb-2">
+              You send logo (if you have one), photos, key info and anything you definitely want on the site. If you don’t have good photos yet, we can work with simple placeholders first.
+            </p>
+            <ul class="text-xs text-zinc-400 space-y-1">
+              <li>• Your logo and brand colours (if you have them).</li>
+              <li>• A few photos of your shop/workspace or projects.</li>
+              <li>• Your prices or a rough idea of your services.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step-lg" data-animate="fade-up">
+        <div class="flex items-start gap-4">
+          <span class="process-badge">03</span>
+          <div>
+            <h2 class="text-lg font-semibold mb-1">We design your site</h2>
+            <p class="text-sm text-zinc-300 mb-2">
+              We build a clean, modern draft of your website using the SABR layout system, tailored to your business type (barber, tattoo, trades etc).
+            </p>
+            <ul class="text-xs text-zinc-400 space-y-1">
+              <li>• Homepage focused on trust, services and clear action.</li>
+              <li>• Work/portfolio section to show real results.</li>
+              <li>• Simple contact options that suit how you actually work.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step-lg" data-animate="fade-up">
+        <div class="flex items-start gap-4">
+          <span class="process-badge">04</span>
+          <div>
+            <h2 class="text-lg font-semibold mb-1">You give feedback</h2>
+            <p class="text-sm text-zinc-300 mb-2">
+              Once the first version is ready, we send you a link. You tell us what you like, what feels off and what needs changing.
+            </p>
+            <ul class="text-xs text-zinc-400 space-y-1">
+              <li>• Tweak wording, colours or photos.</li>
+              <li>• Add or remove sections based on your priorities.</li>
+              <li>• Adjust anything that doesn’t feel like “you” yet.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step-lg" data-animate="fade-up">
+        <div class="flex items-start gap-4">
+          <span class="process-badge">05</span>
+          <div>
+            <h2 class="text-lg font-semibold mb-1">Go live & handover</h2>
+            <p class="text-sm text-zinc-300 mb-2">
+              We connect your domain, double-check everything on mobile and desktop, then officially launch your new website.
+            </p>
+            <ul class="text-xs text-zinc-400 space-y-1">
+              <li>• Connect your chosen domain (e.g. yourbusiness.co.uk).</li>
+              <li>• Basic SEO settings so Google can index the site.</li>
+              <li>• Simple handover so you know how to request updates.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 border border-sabr-border rounded-2xl p-6 bg-sabr-deep/70" data-animate="fade-up">
+        <h2 class="text-base md:text-lg font-semibold mb-2">Want us to keep the site updated?</h2>
+        <p class="text-sm text-zinc-300 mb-3">
+          If you don’t want to touch the tech side at all, we can look after updates for you – adding new photos, tweaking prices and keeping things running smoothly.
+        </p>
+        <a href="talk-to-us.html" class="btn-primary">
+          Talk to us about ongoing support
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-8 border-t border-sabr-border/60 bg-sabr-black/90">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-3 text-xs md:text-sm text-zinc-400">
+      <p>© <span id="year"></span> SABR DIGITAL. All rights reserved.</p>
+      <p>Based in Neston, Wiltshire · Working UK-wide</p>
+    </div>
+  </footer>
+</body>
+</html>
